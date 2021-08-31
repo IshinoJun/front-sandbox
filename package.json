@@ -3,20 +3,40 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "run-p dev:*",
+    "dev:next": "next dev",
+    "dev:aspida": "aspida --watch",
+    "build": "aspida && next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@aspida/axios": "^1.7.1",
+    "@chakra-ui/react": "1.6.3",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "axios": "^0.21.1",
+    "framer-motion": "^4",
     "next": "11.0.1",
+    "npm-run-all": "^4.1.5",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-beautiful-dnd": "^13.1.0",
+    "react-cropper": "^2.1.8",
+    "react-dom": "17.0.2",
+    "react-dropzone": "^11.3.4",
+    "react-easy-crop": "^3.5.2",
+    "react-select": "^4.3.1"
   },
   "devDependencies": {
     "@types/react": "17.0.14",
+    "@types/react-beautiful-dnd": "^13.1.1",
+    "@types/react-select": "^4.0.17",
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "downshift": "^6.1.3",
     "eslint": "7.31.0",
     "eslint-config-next": "11.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.3.2",
     "typescript": "4.3.5"
   }
 }
